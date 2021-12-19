@@ -1,0 +1,11 @@
+---
+- name: Remote Clients Reboot Linux
+  hosts: remoteservers
+  gather_facts: no
+  remote_user: siri
+  become: true
+ 
+  tasks:
+    - name: Reboot the remote clients (Wait for 5 min)
+      reboot:
+        reboot_timeout: 300

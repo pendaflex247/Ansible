@@ -1,8 +1,14 @@
 #k8s-master
-192.168.0.155
+server1 ansible_host=192.168.0.155  new_hostname=k8s-master
 
 #k8s-worker-01
-192.168.0.156
+server2 ansible_host=192.168.0.156 new_hostname=k8s-worker-01
 
 #k8s-worker-02
-192.168.0.157
+server3 ansible_host=192.168.0.157 new_hostname=k8s-worker-02 
+
+[remoteservers]
+server1
+server2
+server3
+

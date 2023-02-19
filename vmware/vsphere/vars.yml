@@ -1,0 +1,12 @@
+vcenter_hostname: 172.18.81.75
+notes:  Automated VM creation test
+folder: Ansible-test
+datastore: DS-2-WD_1TB_PCIE
+datacenter: Datacenter
+customization_spec: CloudLocalServerDHCP
+esxi_hostname: 172.18.81.59
+state: poweredon
+servers:
+        - { name: centos8_01, template: centos8template }
+        - { name: centos7_01, template: centos7template }
+       

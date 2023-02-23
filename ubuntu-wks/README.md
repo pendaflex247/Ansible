@@ -35,10 +35,46 @@ This is a completly new setup
 
     sudo apt install ansible
 
-**create Playbook**
+**Install dconf cli package**
+
+    sudo apt install dconf-cli
+
+    sudo apt install python3-psutil
+
+    #dump dconf setting to see what is avaible
+
+    dconf dump / > settings.txt
+
+    nano settings
+
+**Create Playbook**
 
     nano local.yml
 
+    #if you edit the git repo update the git repo before you run the playbook 
+    
 **Run Playbook using ansible pull**
 
-    sudo ansible-pull -U 
+    sudo ansible-pull -U https://github.com/pendaflex247/ubuntu-wks.git
+
+
+## Running the play book on a new desktop or laptop
+
+    sudo apt install ansible
+
+    sudo ansible-pull -U https://github.com/pendaflex247/ubuntu-wks.git
+
+**Content**
+
+    Packages:
+
+    Wallpaper:
+
+    Hostname:
+
+    Hosts:
+
+    Add user:
+
+    set ipaddress:
+

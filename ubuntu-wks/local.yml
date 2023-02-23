@@ -11,3 +11,4 @@
            - htop
            - tmux
            - net-tools
+           - iputils-ping

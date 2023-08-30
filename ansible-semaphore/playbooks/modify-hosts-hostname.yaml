@@ -1,0 +1,17 @@
+---
+
+- name: Modify hostname and /etc/hosts on remote clients
+  hosts: remoteservers
+  become: True
+  tasks:
+
+    - name: Update hostname
+      hostname:
+        name: "{{ new_hostname }}"
+
+    - name: Add new hostname to /etc/hosts removing the old hostname
+      lineinfile:
+        path: /etc/hosts
+        regexp: '^127\.0\.0\.1[ \t]+localhost'
+        line: '127.0.0.1 localhost {{ new_hostname }}'       
+        state: present
